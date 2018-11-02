@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Widget</title>
+</head>
+<body>
+<div id="widget"></div>
+<script src="./lib/widget-library-webpack.min.js"></script>
+<script>
+  var NS = window['widget-library-webpack'];
+  NS.config({
+    locale: 'en_US',
+    environment: 'dev',
+    authId: '',
+    apiKey: ''
+  });
+  var widget = NS.widgets.Widget.new({selector: '#widget'});
+  widget.render({arg: '00001'});
+</script>
+</body>
+</html>
