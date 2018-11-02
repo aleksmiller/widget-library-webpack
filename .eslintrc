@@ -6,6 +6,11 @@
     "node": true
   },
 
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+
   "globals": {
     "document": false,
     "escape": false,
@@ -22,7 +27,7 @@
   "parser": "babel-eslint",
 
   "plugins": [
-    
+
   ],
 
   "rules": {

@@ -1,9 +1,20 @@
-export default class Widget {
-  constructor() {
-    this._title = 'Widget';
-  }
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-  get title() {
-    return this._title;
+class Widget extends Component {
+  render() {
+    return (
+      <div>{this.props.apiKey}</div>
+    );
   }
 }
+
+Widget.propTypes = {
+  apiKey: PropTypes.string,
+  authId: PropTypes.string,
+  locale: PropTypes.string,
+  selector: PropTypes.string,
+  arg: PropTypes.string
+};
+
+export default Widget;

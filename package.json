@@ -4,7 +4,7 @@
   "description": "Produce universal widgets library with webpack and es6.",
   "main": "lib/widget-library-webpack.js",
   "scripts": {
-    "build": "webpack --env dev && webpack --env build && npm run test",
+    "build": "webpack --env dev && webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
     "test": "mocha --require babel-register --colors ./test/*.spec.js",
     "test:watch": "mocha --require babel-register --colors -w ./test/*.spec.js"
@@ -26,9 +26,10 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.51",
-    "@babel/core": "^7.0.0-beta.51",
-    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^8.0.3",
     "babel-loader": "^8.0.0-beta.4",
     "babel-plugin-add-module-exports": "^0.2.1",
@@ -37,6 +38,7 @@
     "chai": "^4.1.2",
     "eslint": "^5.0.1",
     "eslint-loader": "^2.0.0",
+    "eslint-plugin-react": "^7.11.1",
     "jsdom": "11.11.0",
     "jsdom-global": "3.0.2",
     "mocha": "^4.0.1",
@@ -44,5 +46,9 @@
     "webpack": "^4.12.2",
     "webpack-cli": "^3.0.8",
     "yargs": "^10.0.3"
+  },
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
   }
 }
